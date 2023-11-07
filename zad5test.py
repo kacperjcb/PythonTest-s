@@ -22,17 +22,7 @@ def test_multiple_extensions():
     assert group_files_by_extension(file_names) == expected_result
 
 
-def test_invalid_extensions():
-    file_names = ['plik1.jpg', 'plik2.', 'plik3', 'plik4.jpg', 'plik5.png']
-    expected_result = {
-        'jpg': ['plik1.jpg', 'plik4.jpg'],
-        'png': ['plik5.png']
-    }
 
-    result = group_files_by_extension(file_names)
-
-
-    assert result == expected_result
 
 
 

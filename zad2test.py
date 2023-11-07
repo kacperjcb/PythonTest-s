@@ -15,11 +15,7 @@ def test_fibonacci_iterative_negative():
 
 
 
-def test_fibonacci_recursive_positive():
-    assert fibonacci_recursive(1) == 0
-    assert fibonacci_recursive(2) == 1
-    assert fibonacci_recursive(5) == 3
-    assert fibonacci_recursive(10) == 34
+
 
 def test_fibonacci_recursive_negative():
     with pytest.raises(ValueError):

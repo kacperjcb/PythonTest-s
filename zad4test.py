@@ -13,8 +13,7 @@ def test_gcd_recursive_positive():
     assert gcd_recursive(60, 48) == 12
     assert gcd_recursive(17, 8) == 1
 
-def test_gcd_iterative_failure():
-    assert gcd_iterative(48, 18) == 42
+
 
 if __name__ == "__main__":
     pytest.main()

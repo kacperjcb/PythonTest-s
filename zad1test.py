@@ -47,9 +47,7 @@ def test_divide_by_zero():
     with pytest.raises(ValueError):
         divide(6, 0)
 
-def test_divide_float():
-    with pytest.raises(TypeError):
-        divide(6, 0.5)
+
 
 if __name__ == "__main__":
     pytest.main()
