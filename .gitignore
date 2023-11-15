@@ -1,2 +1,5 @@
 # Ignore Python virtual environment (venv) directories
 venv/
+__pycache__/
+ __.pytest_cache__
+ .idea/

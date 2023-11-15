@@ -14,6 +14,25 @@ def test_gcd_recursive_positive():
     assert gcd_recursive(17, 8) == 1
 
 
+def test_gcd_iterative_negative():
+    with pytest.raises(ValueError):
+        gcd_iterative(-1, 5)
+
+
+def test_gcd_iterative_negative_2():
+    with pytest.raises(ValueError):
+        gcd_iterative(10, -5)
+
+
+def test_gcd_recursive_negative():
+    with pytest.raises(ValueError):
+        gcd_recursive(-3, 7)
+
+
+def test_gcd_recursive_negative_2():
+    with pytest.raises(ValueError):
+        gcd_recursive(8, -4)
+
 
 if __name__ == "__main__":
     pytest.main()

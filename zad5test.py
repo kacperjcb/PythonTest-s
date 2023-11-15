@@ -21,7 +21,25 @@ def test_multiple_extensions():
     }
     assert group_files_by_extension(file_names) == expected_result
 
+def test_group_files_by_extension_no_extension():
+    file_names = ["plik1", "plik2", "plik3"]
+    result = group_files_by_extension(file_names)
+    assert "" in result
+    assert len(result[""]) == len(file_names)
 
+def test_group_files_by_extension_invalid_names():
+    file_names = ["plik1.jpg", "plik2.", ".plik3", "plik4"]
+    result = group_files_by_extension(file_names)
+    assert "" in result
+    assert len(result[""]) == 2
+
+def test_group_files_by_extension_spaces_in_names():
+    file_names = ["plik 1.jpg", "plik 2.gif", "plik 3.mid", "plik 4.jpg"]
+    result = group_files_by_extension(file_names)
+    assert "" not in result
+    assert "jpg" in result
+    assert "gif" in result
+    assert "mid" in result
 
 
 

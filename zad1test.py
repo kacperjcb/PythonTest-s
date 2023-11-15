@@ -49,5 +49,23 @@ def test_divide_by_zero():
 
 
 
+# Funkcja testująca dodawanie
+def test_add_negative():
+    assert add(2, 3) != 6  # Oczekiwane jest, że 2 + 3 nie równa się 6
+
+# Funkcja testująca odejmowanie
+def test_subtract_negative():
+    assert subtract(5, 2) != 2  # Oczekiwane jest, że 5 - 2 nie równa się 2
+
+# Funkcja testująca mnożenie
+def test_multiply_negative():
+    assert multiply(3, 4) != 14  # Oczekiwane jest, że 3 * 4 nie równa się 14
+
+# Funkcja testująca dzielenie
+def test_divide_by_zero():
+    with pytest.raises(ValueError):
+        divide(10, 0)  # Oczekiwane jest zgłoszenie błędu ValueError przy dzieleniu przez zero
+
+
 if __name__ == "__main__":
     pytest.main()
